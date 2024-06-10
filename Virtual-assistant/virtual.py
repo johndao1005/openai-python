@@ -5,25 +5,25 @@ import pyttsx3
 import os
 import time
 
-# Initialize chatbot
-chatbot = ChatBot('Assistant')
-trainer = ChatterBotCorpusTrainer(chatbot)
+# # Initialize chatbot
+# chatbot = ChatBot('Assistant')
+# trainer = ChatterBotCorpusTrainer(chatbot)
 
-# Train chatbot on English corpus
-trainer.train("chatterbot.corpus.english")
+# # Train chatbot on English corpus
+# trainer.train("chatterbot.corpus.english")
 
-# Function to get response from chatbot
-def get_response(command):
-    return str(chatbot.get_response(command)
+# # Function to get response from chatbot
+# def get_response(command):
+#     return str(chatbot.get_response(command)
                
 # Function to execute command
 def execute_command(command):
     if 'time' in command:
         current_time = time.ctime()
         text_to_speech(current_time)
-    else:
-        response = get_response(command)
-        text_to_speech(response)
+    # else:
+    #     response = get_response(command)
+    #     text_to_speech(response)
 
 # Function to convert text to speech
 def text_to_speech(response):
